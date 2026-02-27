@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>mensura</title>
+</head>
+<body>
+  <main style="max-width:40rem;margin:4rem auto;padding:0 1rem;font-family:system-ui;line-height:1.5;">
+    <h1 style="font-weight:600;">mensura</h1>
+    <p>Quiet structure. Public artifacts below.</p>
+    <ul>
+      <li><a href="https://YOUR-PDF-LINK">Paper (PDF)</a></li>
+      <li><a href="https://YOUR-CLM-LINK">CLM</a></li>
+    </ul>
+    <hr />
+    <p style="font-size:0.9rem;">
+      Every accommodation request is a signal. To include one more person is to return to proportion.<br/>
+      <strong>Our present failure:</strong> Care in the world too often arrives after exclusion. Mensura is still learning to begin with it.
+    </p>
+  </main>
+</body>
+</html>
