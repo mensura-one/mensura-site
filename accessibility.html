@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>mensura — accessibility</title>
+  <style>
+    :root{
+      --bg:#ffffff; --text:#111111; --muted:#444444; --link:#0b57d0; --rule:#dddddd; --focus:#ffbf47;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0f1115; --text:#e8e8e8; --muted:#b7b7b7; --link:#9ecbff; --rule:#2a2f3a; --focus:#ffd24d;
+      }
+    }
+    html{ font-size:18px; }
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.7;
+    }
+    a{ color:var(--link); }
+    a:focus, a:focus-visible{
+      outline:3px solid var(--focus); outline-offset:3px; border-radius:4px;
+    }
+    .wrap{ max-width:42rem; margin:0 auto; padding:4rem 1rem 3rem; }
+    .skip{ position:absolute; left:-999px; width:1px; height:1px; overflow:hidden; }
+    .skip:focus{
+      left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem;
+      background:var(--bg); border:1px solid var(--rule); z-index:10;
+    }
+    h1{ margin:0 0 1rem 0; font-weight:650; letter-spacing:.02em; }
+    p{ margin:0 0 1rem 0; }
+    .muted{ color:var(--muted); }
+    hr{ margin:2.5rem 0; border:none; border-top:1px solid var(--rule); }
+    ul{ padding-left:1.25rem; }
+    .back{ display:inline-block; margin-bottom:1.5rem; }
+    code{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:.95rem; }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="wrap">
+    <a class="back" href="./">← Back to mensura</a>
+
+    <main id="content">
+      <h1>accessibility</h1>
+      <p class="muted">
+        Mensura is for all of us. If something here isn’t accessible to you, tell us and we will do what we can within reason.
+      </p>
+
+      <hr />
+
+      <h2>request an accommodation</h2>
+      <p>
+        Email: <a href="mailto:Mensura.one@gmail.com">contact@mensura.one</a>
+      </p>
+      <p class="muted">
+        If you can, include what you’re trying to access and what would make it workable (format, contrast, font size, transcript, etc.).
+      </p>
+
+      <hr />
+
+      <h2>formats we can provide</h2>
+      <ul>
+        <li>HTML (web page)</li>
+        <li>PDF (downloadable)</li>
+        <li>Plain text</li>
+      </ul>
+
+      <hr />
+
+      <h2>current posture</h2>
+      <p>
+        Every accommodation request is a signal. To include one more person is to return to proportion.
+      </p>
+      <p>
+        <strong>Our present failure:</strong> Care in the world too often arrives after exclusion. Mensura is still learning to begin with it.
+      </p>
+    </main>
+  </div>
+</body>
+</html>
