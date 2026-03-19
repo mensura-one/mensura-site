@@ -83,6 +83,60 @@
       color: var(--muted);
       max-width: 36rem;
     }
+    /* artwork */
+.art-desktop {
+  position: relative;
+}
+
+.bee-desktop {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 90px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.snail-desktop {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  width: 90px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.mobile-bee,
+.mobile-snail {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .art-desktop {
+    display: none;
+  }
+
+  .mobile-bee,
+  .mobile-snail {
+    display: block;
+  }
+
+  .mobile-bee {
+    text-align: right;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .mobile-snail {
+    text-align: center;
+    margin: 2rem 0 0 0;
+  }
+
+  .mobile-bee img,
+  .mobile-snail img {
+    width: 90px;
+    height: auto;
+  }
+}
   </style>
 </head>
 
@@ -96,6 +150,12 @@
     </header>
 
     <main id="content">
+      
+<div class="art-desktop">
+  <img src="./bee.jpg" alt="Bee visiting a flower" class="bee-desktop">
+  <img src="./snail.jpg" alt="Snail moving along moss" class="snail-desktop">
+</div>
+      
       <nav aria-label="Public artifacts">
         <ul>
           <li><a href="./paper.pdf">Paper (PDF)</a></li>
@@ -111,8 +171,16 @@
           <li><a href="./accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
+      <div class="art-desktop">
+  <img src="./bee.jpg" alt="Bee visiting a flower" class="bee-desktop">
+  <img src="./snail.jpg" alt="Snail moving along moss" class="snail-desktop">
+</div>
 
       <hr />
+
+      <div class="mobile-snail">
+  <img src="./snail.jpg" alt="Snail moving along moss">
+</div>
 
     </main>
   </div>
