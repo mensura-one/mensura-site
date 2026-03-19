@@ -42,9 +42,10 @@
       max-width: 42rem;
       margin: 0 auto;
       padding: 4rem 1rem 3rem;
+      position: relative;
     }
     .skip{
-      position: absolute;
+      position: relative;
       left: -999px;
       top: auto;
       width: 1px;
@@ -84,59 +85,37 @@
       max-width: 36rem;
     }
     /* artwork */
-.art-desktop {
-  position: relative;
-}
-
-.bee-desktop {
+.bee,
+.snail {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 90px;
+}
+
+.bee {
+  top: 170px;
+  right: 120px;
+}
+
+.snail {
+  bottom: 40px;
+  right: 120px;
+}
+
+.bee img,
+.snail img {
+  width: 95px;
   height: auto;
-  opacity: 0.95;
+  display: block;
+  transform-origin: center center;
 }
 
-.snail-desktop {
-  position: absolute;
-  bottom: -10px;
-  right: -20px;
-  width: 90px;
-  height: auto;
-  opacity: 0.95;
+.bee img {
+  transform: rotate(-90deg);
 }
 
-.mobile-bee,
-.mobile-snail {
-  display: none;
+.snail img {
+  transform: rotate(-90deg);
 }
-
-@media (max-width: 600px) {
-  .art-desktop {
-    display: none;
-  }
-
-  .mobile-bee,
-  .mobile-snail {
-    display: block;
-  }
-
-  .mobile-bee {
-    text-align: right;
-    margin: 1rem 0 1.5rem 0;
-  }
-
-  .mobile-snail {
-    text-align: center;
-    margin: 2rem 0 0 0;
-  }
-
-  .mobile-bee img,
-  .mobile-snail img {
-    width: 90px;
-    height: auto;
-  }
-}
+    
   </style>
 </head>
 
@@ -151,17 +130,20 @@
 
     <main id="content">
       
-<div class="art-desktop">
-  <img src="./mensura-bee.jpg" alt="Bee visiting a flower" class="bee-desktop">
-  <img src="./mensura-snail.jpg" alt="Snail moving along moss" class="snail-desktop">
+<div class="bee">
+  <img src="./mensura-bee.jpg" alt="Bee visiting a flower">
 </div>
-      
+
+<div class="snail">
+  <img src="./mensura-snail.jpg" alt="Snail moving along moss">
+</div>
+     
       <nav aria-label="Public artifacts">
         <ul>
           <li><a href="./paper.pdf">Paper (PDF)</a></li>
           <li><a href="./clm.pdf">CLM</a></li>
           <li>
-            <a href="https://within-v1-3.vercel.app/" target=_blank" rel="noopener">
+            <a href="https://within-v1-3.vercel.app/" target="_blank" rel="noopener">
               within - stacked runs pilot
             </a><br>
             <span style="font-size:0.9rem;color:#888;">
@@ -171,16 +153,8 @@
           <li><a href="./accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
-      <div class="art-desktop">
-  <img src="./mensura-bee.jpg" alt="Bee visiting a flower" class="bee-desktop">
-  <img src="./mensura-snail.jpg" alt="Snail moving along moss" class="snail-desktop">
-</div>
-
+      
       <hr />
-
-      <div class="mobile-snail">
-  <img src="./mensura-snail.jpg" alt="Snail moving along moss">
-</div>
 
     </main>
   </div>
