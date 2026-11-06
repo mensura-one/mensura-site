@@ -4,83 +4,104 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>mensura — accessibility</title>
+  <title>thinc | mensura</title>
   <style>
+    /* Exact same styling as your accessibility page */
     :root{
-      --bg:#ffffff; --text:#111111; --muted:#444444; --link:#0b57d0; --rule:#dddddd; --focus:#ffbf47;
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #444444;
+      --link: #0b57d0;
+      --rule: #dddddd;
+      --focus: #ffbf47;
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --bg:#0f1115; --text:#e8e8e8; --muted:#b7b7b7; --link:#9ecbff; --rule:#2a2f3a; --focus:#ffd24d;
+        --bg: #0f1115;
+        --text: #e8e8e8;
+        --muted: #b7b7b7;
+        --link: #9ecbff;
+        --rule: #2a2f3a;
+        --focus: #ffd24d;
       }
     }
-    html{ font-size:18px; }
+    html { font-size: 18px; }
     body{
-      margin:0; background:var(--bg); color:var(--text);
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      line-height:1.7;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
     }
-    a{ color:var(--link); }
+    a{ color: var(--link); }
     a:focus, a:focus-visible{
-      outline:3px solid var(--focus); outline-offset:3px; border-radius:4px;
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
-    .wrap{ max-width:42rem; margin:0 auto; padding:4rem 1rem 3rem; }
-    .skip{ position:absolute; left:-999px; width:1px; height:1px; overflow:hidden; }
-    .skip:focus{
-      left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem;
-      background:var(--bg); border:1px solid var(--rule); z-index:10;
+    .wrap{
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 4rem 1rem 3rem;
     }
-    h1{ margin:0 0 1rem 0; font-weight:650; letter-spacing:.02em; }
-    p{ margin:0 0 1rem 0; }
-    .muted{ color:var(--muted); }
-    hr{ margin:2.5rem 0; border:none; border-top:1px solid var(--rule); }
-    ul{ padding-left:1.25rem; }
-    .back{ display:inline-block; margin-bottom:1.5rem; }
-    code{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:.95rem; }
+    h1{
+      margin: 0 0 1rem 0;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+    }
+    h2{
+      margin: 2rem 0 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    p{ margin: 0 0 1rem 0; color: var(--muted); }
+    ul { margin: 0 0 1.5rem 0; padding-left: 1.5rem; color: var(--muted); }
+    li { margin-bottom: 0.5rem; }
+    hr{
+      margin: 2.5rem 0;
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
   </style>
 </head>
-
 <body>
-  <a class="skip" href="#content">Skip to content</a>
 
   <div class="wrap">
-    <a class="back" href="./">← Back to mensura</a>
+    <a class="back-link" href="./index.html">← Back to mensura</a>
 
-    <main id="content">
-      <h1>accessibility</h1>
-      <p class="muted">
-        Mensura is for all of us. If something here isn’t accessible to you, tell us and we will do what we can within reason.
-      </p>
+    <h1>thinc</h1>
+    <p>A light repository for writing and creative collaboration.</p>
+    <p>When something is made together, value is shared. This is a space for my writing, and for lifting up the work of others.</p>
 
-      <hr />
+    <hr>
 
-      <h2>request an accommodation</h2>
-      <p>
-        Email: <a href="mailto:Mensura.one@gmail.com">contact@mensura.one</a>
-      </p>
-      <p class="muted">
-        If you can, include what you’re trying to access and what would make it workable (format, contrast, font size, transcript, etc.).
-      </p>
+    <h2>my writing</h2>
+    <ul>
+      <li><a href="#">Title of Piece (Coming soon)</a> — Brief description.</li>
+    </ul>
 
-      <hr />
+    <hr>
 
-      <h2>formats we can provide</h2>
-      <ul>
-        <li>HTML (web page)</li>
-        <li>PDF (downloadable)</li>
-        <li>Plain text</li>
-      </ul>
+    <h2>other voices</h2>
+    <p>Work by others that belongs in this space.</p>
+    <ul>
+      <li><a href="./gkr.html">Grace Katherine Risner</a> — Illustration</li>
+    </ul>
 
-      <hr />
+    <hr>
 
-      <h2>current posture</h2>
-      <p>
-        Every accommodation request is a signal. To include one more person is to return to proportion.
-      </p>
-      <p>
-        <strong>Our present failure:</strong> Care in the world too often arrives after exclusion. Mensura is still learning to begin with it.
-      </p>
-    </main>
+    <h2>collaborate</h2>
+    <p>If you want to share work here, or make something together, reach out.</p>
+    <p>Email: <a href="mailto:contact@mensura.one">contact@mensura.one</a></p>
+    <p>Include what you are working on, and what kind of collaboration you have in mind.</p>
+
   </div>
+
 </body>
 </html>
